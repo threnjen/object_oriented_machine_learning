@@ -4,18 +4,27 @@ In this series, we are going to build a class-based machine learning framework w
 
 The only base assumption as we start the project are an install of Python 3.9 or greater on your machine, properly added to the path, as well as a passing familiarity/introduction to Python classes. You'll also need to have the pip package downloader installed.
 
-In Module 1:
+The GitHub repo for this project is here: https://github.com/threnjen/object_oriented_machine_learning
+Each module section includes a tutorial notebook and all related code for the module's lesson.
+
+[Module 1](https://github.com/threnjen/object_oriented_machine_learning/blob/main/module1/module_1.ipynb):
 - Setting up our project environment using Pipenv
 - Picking out our code editor as we move beyond Jupyter Notebook
 - Setting up code formatting with Black
 
-Module 2:
+[Module 2](https://github.com/threnjen/object_oriented_machine_learning/blob/main/module2/module_2.ipynb):
 - Quick refresher of classes and object-oriented programming (or a quick introduction, but this is not intended as a tutorial about class-based programming)
-- Building our base model class, onto which we we will build all future modules for EDA, visualizations, modeling, etc
-- Introducing type hints and docstrings into our code
+- Building our base model class with an initial exploratory method
+- Introducing docstrings into our code
 
-Module 3:
+[Module 3](https://github.com/threnjen/object_oriented_machine_learning/blob/main/module3/module_3.ipynb):
+- Building an EDA handler class
+- Integrating our EDA handler into our BaseModel
+
+[Module 4](https://github.com/threnjen/object_oriented_machine_learning/blob/main/module4/module_4.ipynb):
 - Understanding the concept of an abstract class
 - Setting up a Regression abstract class
-- Building an initial exploratory method
+- Introducing type hints into our code
+
+
 
