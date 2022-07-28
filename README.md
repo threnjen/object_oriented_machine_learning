@@ -1,6 +1,4 @@
-(I think a stronger motivation could be useful here)
-
-As an aspiring data scientist or even a production level contributor, it's possible that many of your projects entail spinning up a Jupyter Notebook and writing a hard-coded project from start to finish. Maybe you'll use a few functions here and there for reusability, but generally, the project is fully partitioned (I don't know what partitioned means here...self-contained? Has one long script?). Then when you start your next project, you may find yourself hunting through an older project for interesting code snippets - what was that function that made that cool visual? How did I engineer that particular feature again? What was that method that I used to do that...other thing?
+As an aspiring data scientist or even a production level contributor, it's possible that many of your projects entail spinning up a Jupyter Notebook and writing a hard-coded project from start to finish. Maybe you'll use a few functions here and there for reusability, but generally, the project is fully self-contained. When you start your next project, you may find yourself hunting through an older project for interesting code snippets - what was that function that made that cool visual? How did I engineer that particular feature again? What was that method that I used to do that...other thing?
 
 In this series, we are going to build a class-based machine learning framework which is reusable, expandable, and can accomodate both regression and classification problems. As we work through our build we will focus on several coding best-practices to make our code clean and understandable for our future self, including:
 - [virtual environments](https://pipenv.pypa.io/en/latest/)
@@ -34,3 +32,4 @@ Each module section includes a tutorial notebook and all related code for the mo
 - Understanding the concept of an abstract class
 - Setting up a Regression abstract class
 - Introducing type hints into our code
+
