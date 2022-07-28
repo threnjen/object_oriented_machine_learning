@@ -32,3 +32,4 @@ Each module section includes a tutorial notebook and all related code for the mo
 - Understanding the concept of an abstract class
 - Setting up a Regression abstract class
 - Introducing type hints into our code
+
