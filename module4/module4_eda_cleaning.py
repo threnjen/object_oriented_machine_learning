@@ -5,7 +5,7 @@ class EDACleaning:
     def __init__(self):
         pass
 
-    def _set_target(self, target:str):
+    def set_target(self, target: str):
         """set model target variable"""
         self.target = target
 

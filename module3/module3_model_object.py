@@ -23,7 +23,7 @@ class BaseModel:
             target: target field for model
         """
         self.target = target
-        self.cleaner._set_target(target)
+        self.cleaner.set_target(target)
 
     def print_statistics(self):
         """Print basic statistics for data"""
