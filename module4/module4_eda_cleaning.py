@@ -5,11 +5,11 @@ class EDACleaning:
     def __init__(self):
         pass
 
-    def _set_target(self, target:str):
+    def set_target(self, target: str) -> None:
         """set model target variable"""
         self.target = target
 
-    def print_statistics(self, df: pd.DataFrame):
+    def print_statistics(self, df: pd.DataFrame) -> None:
         """Print basic dataframe statistics"""
         print(df.head())
         print(f"DF shape: {df.shape}\n")
