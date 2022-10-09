@@ -6,6 +6,7 @@ from module3_eda_cleaning import EDACleaning
 class BaseModel:
     def __init__(self, filename):
         self.df = self._load_file(filename)
+        self.target = None
         self.cleaner = EDACleaning()
 
     def _load_file(self, filename):

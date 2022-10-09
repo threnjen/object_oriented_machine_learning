@@ -60,6 +60,10 @@ class EDACleaning:
         find_outliers = self.df.groupby(field)[self.target].describe()
         find_outliers.sort_values("mean", ascending=False).head(20)
 
+    def drop_feature(self, df, field):
+        # drop multicollinear features and unneeded features
+        df.drop([field], axis=1, inplace=True)
+
     def print_corr(self, df):
         df.corr()
 
@@ -96,10 +100,6 @@ class EDACleaning:
         df_correlations[
             (df_correlations.correlation > 0.75) & (df_correlations.correlation < 0.95)
         ]
-
-    def drop_feature(self, df, field):
-        # drop multicollinear features and unneeded features
-        df.drop([field], axis=1, inplace=True)
 
     def show_target_correlation(self, df):
         # Check out our variables correlationg with price

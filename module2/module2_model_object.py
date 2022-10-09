@@ -4,6 +4,7 @@ import pandas as pd
 class BaseModel:
     def __init__(self, filename):
         self.df = self._load_file(filename)
+        self.target = None
 
     def _load_file(self, filename):
         """Load file from filename and set target field
