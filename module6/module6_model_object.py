@@ -10,6 +10,11 @@ class BaseModel(ABC):
     def __init__(self, filename: str, seed: Optional[int] = None):
         self.df = self._load_file(filename)
         self.target = None
+        if seed:
+            np.random.seed(seed)
+            self.randomstate = np.random.random(1)
+        else:
+            self.randomstate = np.random.random(1)
         self.cleaner = EDACleaning()
 
     def _load_file(self, filename: str) -> pd.DataFrame:
