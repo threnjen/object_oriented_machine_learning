@@ -31,12 +31,13 @@ class EDACleaning:
         else:
             print(df.sort_values(field, ascending=asc).head())
 
-    def check_value_counts(self, df: pd.DataFrame, field: str) -> None:
+    def check_value_proportions(self, df: pd.DataFrame, field: str) -> None:
         print(df[field].value_counts(normalize=True).head())
 
-    def find_outliers(self, field: str) -> None:
-        find_outliers = self.df.groupby(field)[self.target].describe()
-        find_outliers.sort_values("mean", ascending=False).head(20)
+    def find_outliers(self, df: pd.DataFrame, field: str) -> None:
+        find_outliers = df.groupby(field)[self.target].describe()
+        outlier_report = find_outliers.sort_values("mean", ascending=False).head(20)
+        print(outlier_report)
 
     def drop_dupes(self, df: pd.DataFrame, subset: list = None) -> pd.DataFrame:
         if subset:

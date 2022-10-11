@@ -53,7 +53,7 @@ class EDACleaning:
         else:
             print(df.sort_values(field, ascending=asc).head())
 
-    def check_value_counts(self, df, field):
+    def check_value_proportions(self, df, field):
         print(df[field].value_counts(normalize=True).head())
 
     def find_outliers(self, field):

@@ -7,7 +7,7 @@ from module5.module5_eda_cleaning import EDACleaning
 
 
 class BaseModel(ABC):
-    def __init__(self, filename: str, seed: Optional[int] = None):
+    def __init__(self, filename: str):
         self.df = self._load_file(filename)
         self.target = None
         self.cleaner = EDACleaning()
@@ -63,17 +63,17 @@ class BaseModel(ABC):
             field = self.target
         self.cleaner.print_sorted(df=self.df, field=field, asc=asc, groupby=groupby)
 
-    def check_value_counts(self, field: Optional[str] = None) -> None:
+    def check_value_proportions(self, field: Optional[str] = None) -> None:
         """Will print value counts for field
         Args:
             field (_type_, optional): Will report on this field. Defaults to target.
         """
         if not field:
             field = self.target
-        self.cleaner.check_value_counts(self.df, field)
+        self.cleaner.check_value_proportions(self.df, field)
 
     def find_outliers(self, field: str) -> None:
-        self.cleaner.find_outliers(field)
+        self.cleaner.find_outliers(self.df, field)
 
     def drop_dupes(self, subset: Optional[list] = None, save: Optional[bool] = True):
         """Save point, then drops duplicate dataframe rows

@@ -54,10 +54,10 @@ class BaseModel(ABC):
             field = self.target
         self.cleaner.print_sorted(df=self.df, field=field, asc=asc, groupby=groupby)
 
-    def check_value_counts(self, field=None):
+    def check_value_proportions(self, field=None):
         if not field:
             field = self.target
-        self.cleaner.check_value_counts(self.df, field)
+        self.cleaner.check_value_proportions(self.df, field)
 
     def reset_df_index(self):
         print(self.df.head())
